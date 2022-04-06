@@ -32,14 +32,25 @@ class QuoteViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return quoteType.normalQuotes.count
+        return quoteType.normalQuotes.count + 1
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: K.cellIdentifier, for: indexPath)
         
-        cell.textLabel?.text = quoteType.normalQuotes[indexPath.row]
+        if indexPath.row < quoteType.normalQuotes.count {
+            cell.textLabel?.text = quoteType.normalQuotes[indexPath.row]
+        } else {
+            cell.textLabel?.text = "Buy Premium Quotes"
+            
+            cell.textLabel?.textColor = UIColor(hexString: "#0984e3")
+            
+            tableView.rowHeight = 70
+            
+            cell.accessoryType = .disclosureIndicator
+        }
+        
         
         cell.textLabel?.numberOfLines = 0
         
