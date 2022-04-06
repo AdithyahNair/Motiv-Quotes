@@ -8,11 +8,18 @@
 import UIKit
 import Foundation
 import ChameleonFramework
+import StoreKit
 
 
-class QuoteViewController: UITableViewController {
+class QuoteViewController: UITableViewController, SKPaymentTransactionObserver {
+    
+    
     
     let quoteType = Quotes()
+    
+    let productID = "com.adithyahnair.Motiv-Quotes.PremiumQuotes"
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -61,10 +68,14 @@ class QuoteViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
+        if indexPath.row == quoteType.normalQuotes.count {
+            buyPremiumQuotes()
+        }
+        
         tableView.deselectRow(at: indexPath, animated: true)
     }
     
-    //MARK: - modifyNavBar
+    //MARK: - modifyNavBar() method
     
     func modifyNavBar(_ backgroundColor: UIColor) {
         
@@ -83,6 +94,36 @@ class QuoteViewController: UITableViewController {
         navBar.scrollEdgeAppearance = navBar.standardAppearance
         
     }
+    
+    //MARK: - buyPremiumQuotes() method
+    
+    func buyPremiumQuotes() {
+        
+        if SKPaymentQueue.canMakePayments() {
+            let paymentRequest = SKMutablePayment()// creates a payment request
+            
+            paymentRequest.productIdentifier = productID// adds the productID, or the product which we want to get a payment request for
+            
+            SKPaymentQueue.default().add(paymentRequest)// we add this payment request to the queue
+        } else {
+            // can't make payments
+            print("Can't make payments.")
+        }
+        
+    }
+    
+    // gets triggered each time the payment queue is updated.
+    func paymentQueue(_ queue: SKPaymentQueue, updatedTransactions transactions: [SKPaymentTransaction]) {
+        for transaction in transactions {
+            if transaction.transactionState == .purchased {
+                print("Transaction Successful")
+            } else if transaction.transactionState == .failed {
+                print("Trasaction failed.")
+            }
+        }
+    }
+    
+    
 
     
     @IBAction func restorePressed(_ sender: UIBarButtonItem) {

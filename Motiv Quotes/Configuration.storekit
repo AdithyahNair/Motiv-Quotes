@@ -1,0 +1,33 @@
+{
+  "identifier" : "9B685B27",
+  "nonRenewingSubscriptions" : [
+
+  ],
+  "products" : [
+    {
+      "displayPrice" : "0.99",
+      "familyShareable" : false,
+      "internalID" : "C2C10D7A",
+      "localizations" : [
+        {
+          "description" : "Premium Quotes",
+          "displayName" : "Premium Quotes",
+          "locale" : "en_US"
+        }
+      ],
+      "productID" : "com.adithyahnair.Motiv-Quotes.PremiumQuotes",
+      "referenceName" : "Premium Quotes",
+      "type" : "NonConsumable"
+    }
+  ],
+  "settings" : {
+
+  },
+  "subscriptionGroups" : [
+
+  ],
+  "version" : {
+    "major" : 1,
+    "minor" : 1
+  }
+}
