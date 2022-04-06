@@ -9,21 +9,29 @@
 /* Begin PBXBuildFile section */
 		14FC47C227FD1C14004E8498 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FC47C127FD1C14004E8498 /* AppDelegate.swift */; };
 		14FC47C427FD1C14004E8498 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FC47C327FD1C14004E8498 /* SceneDelegate.swift */; };
-		14FC47C627FD1C14004E8498 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FC47C527FD1C14004E8498 /* ViewController.swift */; };
 		14FC47C927FD1C14004E8498 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14FC47C727FD1C14004E8498 /* Main.storyboard */; };
 		14FC47CB27FD1C15004E8498 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14FC47CA27FD1C15004E8498 /* Assets.xcassets */; };
 		14FC47CE27FD1C15004E8498 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14FC47CC27FD1C15004E8498 /* LaunchScreen.storyboard */; };
+		14FC47D627FD1C91004E8498 /* K.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FC47D527FD1C91004E8498 /* K.swift */; };
+		14FC47DF27FD1EB7004E8498 /* Quotes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FC47DE27FD1EB7004E8498 /* Quotes.swift */; };
+		14FC47E127FD1FC4004E8498 /* QuoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FC47E027FD1FC4004E8498 /* QuoteViewController.swift */; };
+		7C397C85FE43C1C136064ECC /* Pods_Motiv_Quotes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95ED56E2250EA68D145D7649 /* Pods_Motiv_Quotes.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		14FC47BE27FD1C14004E8498 /* Motiv Quotes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Motiv Quotes.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		14FC47C127FD1C14004E8498 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		14FC47C327FD1C14004E8498 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		14FC47C527FD1C14004E8498 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		14FC47C827FD1C14004E8498 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		14FC47CA27FD1C15004E8498 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		14FC47CD27FD1C15004E8498 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		14FC47CF27FD1C15004E8498 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		14FC47D527FD1C91004E8498 /* K.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = K.swift; sourceTree = "<group>"; };
+		14FC47DE27FD1EB7004E8498 /* Quotes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quotes.swift; sourceTree = "<group>"; };
+		14FC47E027FD1FC4004E8498 /* QuoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteViewController.swift; sourceTree = "<group>"; };
+		17DC8374362DC27BB60385BF /* Pods-Motiv Quotes.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Motiv Quotes.debug.xcconfig"; path = "Target Support Files/Pods-Motiv Quotes/Pods-Motiv Quotes.debug.xcconfig"; sourceTree = "<group>"; };
+		4CA21D58B530A934B3A6DAE0 /* Pods-Motiv Quotes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Motiv Quotes.release.xcconfig"; path = "Target Support Files/Pods-Motiv Quotes/Pods-Motiv Quotes.release.xcconfig"; sourceTree = "<group>"; };
+		95ED56E2250EA68D145D7649 /* Pods_Motiv_Quotes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Motiv_Quotes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +39,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7C397C85FE43C1C136064ECC /* Pods_Motiv_Quotes.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		04F5816C46C8D21216BE838B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				17DC8374362DC27BB60385BF /* Pods-Motiv Quotes.debug.xcconfig */,
+				4CA21D58B530A934B3A6DAE0 /* Pods-Motiv Quotes.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		144C2EB127FD229C00BF58D8 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				14FC47CA27FD1C15004E8498 /* Assets.xcassets */,
+				14FC47CC27FD1C15004E8498 /* LaunchScreen.storyboard */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		14FC47B527FD1C14004E8498 = {
 			isa = PBXGroup;
 			children = (
 				14FC47C027FD1C14004E8498 /* Motiv Quotes */,
 				14FC47BF27FD1C14004E8498 /* Products */,
+				04F5816C46C8D21216BE838B /* Pods */,
+				606D640931F349D319E501D5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,13 +87,46 @@
 			children = (
 				14FC47C127FD1C14004E8498 /* AppDelegate.swift */,
 				14FC47C327FD1C14004E8498 /* SceneDelegate.swift */,
-				14FC47C527FD1C14004E8498 /* ViewController.swift */,
-				14FC47C727FD1C14004E8498 /* Main.storyboard */,
-				14FC47CA27FD1C15004E8498 /* Assets.xcassets */,
-				14FC47CC27FD1C15004E8498 /* LaunchScreen.storyboard */,
+				14FC47DD27FD1E3E004E8498 /* Model */,
+				14FC47DA27FD1E09004E8498 /* Controller */,
+				14FC47D927FD1E03004E8498 /* View */,
+				144C2EB127FD229C00BF58D8 /* Supporting Files */,
 				14FC47CF27FD1C15004E8498 /* Info.plist */,
 			);
 			path = "Motiv Quotes";
+			sourceTree = "<group>";
+		};
+		14FC47D927FD1E03004E8498 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				14FC47C727FD1C14004E8498 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		14FC47DA27FD1E09004E8498 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				14FC47E027FD1FC4004E8498 /* QuoteViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		14FC47DD27FD1E3E004E8498 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				14FC47DE27FD1EB7004E8498 /* Quotes.swift */,
+				14FC47D527FD1C91004E8498 /* K.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		606D640931F349D319E501D5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				95ED56E2250EA68D145D7649 /* Pods_Motiv_Quotes.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +136,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 14FC47D227FD1C15004E8498 /* Build configuration list for PBXNativeTarget "Motiv Quotes" */;
 			buildPhases = (
+				07F783A70C2DCB466E15568E /* [CP] Check Pods Manifest.lock */,
 				14FC47BA27FD1C14004E8498 /* Sources */,
 				14FC47BB27FD1C14004E8498 /* Frameworks */,
 				14FC47BC27FD1C14004E8498 /* Resources */,
+				EE7EFF6D991199E24D1276EB /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -133,14 +197,58 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		07F783A70C2DCB466E15568E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Motiv Quotes-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EE7EFF6D991199E24D1276EB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Motiv Quotes/Pods-Motiv Quotes-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Motiv Quotes/Pods-Motiv Quotes-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Motiv Quotes/Pods-Motiv Quotes-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		14FC47BA27FD1C14004E8498 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				14FC47C627FD1C14004E8498 /* ViewController.swift in Sources */,
+				14FC47DF27FD1EB7004E8498 /* Quotes.swift in Sources */,
+				14FC47D627FD1C91004E8498 /* K.swift in Sources */,
 				14FC47C227FD1C14004E8498 /* AppDelegate.swift in Sources */,
 				14FC47C427FD1C14004E8498 /* SceneDelegate.swift in Sources */,
+				14FC47E127FD1FC4004E8498 /* QuoteViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,6 +392,7 @@
 		};
 		14FC47D327FD1C15004E8498 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 17DC8374362DC27BB60385BF /* Pods-Motiv Quotes.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -312,6 +421,7 @@
 		};
 		14FC47D427FD1C15004E8498 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4CA21D58B530A934B3A6DAE0 /* Pods-Motiv Quotes.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
