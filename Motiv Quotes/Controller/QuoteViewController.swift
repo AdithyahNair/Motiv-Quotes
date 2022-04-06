@@ -7,6 +7,7 @@
 
 import UIKit
 import Foundation
+import ChameleonFramework
 
 
 class QuoteViewController: UITableViewController {
@@ -21,9 +22,10 @@ class QuoteViewController: UITableViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        let appearance = UINavigationBarAppearance()
-        appearance.configureWithOpaqueBackground()
-        appearance.backgroundColor = .white
+        if let backgroundColor = UIColor(hexString: "#0984e3") {
+            modifyNavBar(backgroundColor)
+        }
+        
     }
 
     //MARK: - TableView DataSource Methods
@@ -49,6 +51,26 @@ class QuoteViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
+    //MARK: - modifyNavBar
+    
+    func modifyNavBar(_ backgroundColor: UIColor) {
+        
+        guard let navBar = navigationController?.navigationBar else {fatalError("Navigation Controller does not exist.")}
+        
+        let appearance = UINavigationBarAppearance()
+
+        let contrastColor = ContrastColorOf(backgroundColor, returnFlat: true)
+        
+        appearance.configureWithOpaqueBackground()
+        appearance.backgroundColor = backgroundColor
+        appearance.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: contrastColor]
+        
+        navBar.tintColor = contrastColor
+        navBar.standardAppearance = appearance
+        navBar.scrollEdgeAppearance = navBar.standardAppearance
+        
     }
 
     
