@@ -13,16 +13,14 @@ import StoreKit
 
 class QuoteViewController: UITableViewController, SKPaymentTransactionObserver {
     
-    
-    
     let quoteType = Quotes()
     
     let productID = "com.adithyahnair.Motiv-Quotes.PremiumQuotes"
     
-    
-
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        SKPaymentQueue.default().add(self)
 
     }
     
@@ -48,6 +46,10 @@ class QuoteViewController: UITableViewController, SKPaymentTransactionObserver {
         
         if indexPath.row < quoteType.normalQuotes.count {
             cell.textLabel?.text = quoteType.normalQuotes[indexPath.row]
+            
+            cell.textLabel?.textColor = .none
+            
+            cell.accessoryType = .none
         } else {
             cell.textLabel?.text = "Buy Premium Quotes"
             
@@ -114,15 +116,23 @@ class QuoteViewController: UITableViewController, SKPaymentTransactionObserver {
     
     // gets triggered each time the payment queue is updated.
     func paymentQueue(_ queue: SKPaymentQueue, updatedTransactions transactions: [SKPaymentTransaction]) {
+        
         for transaction in transactions {
             if transaction.transactionState == .purchased {
                 print("Transaction Successful")
+                
+                showPremiumQuotes()
             } else if transaction.transactionState == .failed {
                 print("Trasaction failed.")
             }
         }
     }
     
+    func showPremiumQuotes() {
+        quoteType.normalQuotes.append(contentsOf: quoteType.premiumQuotes)
+        
+        tableView.reloadData()
+    }
     
 
     
